@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ficha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="carregarTela()">
+
+    <div class="div_principal">
+        
+        <div class="div_cabecalho">
+            <div class="div_cabecalho_titulo">
+                <div class="div_logo_icone"></div>
+                <div>
+                    <h1>Ficha de personagem</h1>
+                </div>
+            </div>
+            <div class="div_selecao_personagem">
+                <label for="select_personagem">PERSONAGEM:</label>
+                <select id="select_personagem" onchange="trocarPersonagem()">
+
+                </select>
+            </div>
+        </div>
+
+        <div class="div_conteudo_superior">
+            
+            <div class="div_painel div_painel_foto">
+                <div class="div_painel_cabecalho">
+                    <span>PERSONAGEM</span>
+                </div>
+                <div class="div_painel_corpo">
+                    <div class="div_caixa_foto">
+                        <img id="img_personagem" src="img/humano.jpg" alt="Foto do Personagem">
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_painel div_painel_atributos">
+                <div class="div_painel_cabecalho">
+                    <span>ATRIBUTOS</span>
+                </div>
+                <div class="div_painel_corpo">
+                    
+                    <div class="div_item_atributo">
+                        <strong>Força</strong>
+                        <div class="div_atrib_valor" id="val_atr_forca">18</div>
+                    </div>
+
+                    <div class="div_item_atributo">
+                        <strong>Velocidade</strong>
+                        <div class="div_atrib_valor" id="val_atr_velocidade">14</div>
+                    </div>
+
+                    <div class="div_item_atributo">
+                        <strong>Agilidade</strong>
+                        <div class="div_atrib_valor" id="val_atr_agilidade">16</div>
+                    </div>
+
+                    <div class="div_item_atributo">
+                        <strong>Resistência</strong>
+                        <div class="div_atrib_valor" id="val_atr_resistencia">15</div>
+                    </div>
+
+                    <div class="div_item_atributo">
+                        <strong>Inteligência</strong>
+                        <div class="div_atrib_valor" id="val_atr_inteligencia">12</div>
+                    </div>
+
+                    <div class="div_item_atributo">
+                        <strong>Sorte</strong>
+                        <div class="div_atrib_valor" id="val_atr_sorte">10</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="div_painel div_painel_caracteristicas">
+                <div class="div_painel_cabecalho">
+                    <span>CARACTERÍSTICAS</span>
+                </div>
+                <div class="div_painel_corpo">
+                    
+                    <div class="div_caixa_dado">
+                        <span class="span_rotulo">NOME</span>
+                        <span class="span_conteudo" id="val_nome">-</span>
+                    </div>
+
+                    <div class="div_caixa_dado">
+                        <span class="span_rotulo">RAÇA</span>
+                        <span class="span_conteudo" id="val_raca">-</span>
+                    </div>
+
+                    <div class="div_caixa_dado">
+                        <span class="span_rotulo">CLASSE</span>
+                        <span class="span_conteudo" id="val_classe">-</span>
+                    </div>
+
+                    <div class="div_caixa_dado">
+                        <span class="span_rotulo">DATA DE NASCIMENTO</span>
+                        <span class="span_conteudo" id="val_idade">-</span>
+                    </div>
+
+                    <div class="div_caixa_dado">
+                        <span class="span_rotulo">ORIGEM</span>
+                        <span class="span_conteudo" id="val_origem">-</span>
+                    </div>
+
+                    <div class="div_caixa_dado">
+                        <span class="span_rotulo">ALINHAMENTO</span>
+                        <span class="span_conteudo" id="val_alinhamento">-</span>
+                    </div>
+                    <div class="div_caixa_dado">
+                        <span class="span_rotulo">GÊNERO</span>
+                        <span class="span_conteudo" id="val_genero">-</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="div_conteudo_inferior">
+            
+            <div class="div_painel div_painel_historia">
+                <div class="div_painel_cabecalho">
+                    <span>HISTÓRIA</span>
+                </div>
+                <div class="div_painel_corpo">
+                    <div class="div_cartao_historia">
+                        <div class="div_titulo_historia">
+                            <strong id="val_tituloHistoria">O Guerreiro do império</strong>
+                        </div>
+                        <p id="val_historia" class="p_historia">
+                            Um bravo guerreiro temido por todos os Stormcloaks
+                        </p>
+                        <div class="div_footer_historia">
+                            <hr>
+                            <span id="val_registro">Registrado por Kaliroth</span>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_painel div_painel_mapa">
+                <div class="div_painel_cabecalho">
+                    <span>MAPA DAS RAÇAS</span>
+                </div>
+                <div class="div_painel_corpo div_corpo_mapa">
+                    <div class="div_area_mapa">
+                        <img src="img/digital-art-old-map-with-terrain-locations.jpg" alt="Mapa das Raças" class="img_mapa_fundo">
+                        <div class="ponto ponto_anoes"><span>• Anões</span></div>
+                        <div class="ponto ponto_humanos"><span>• Humanos</span></div>
+                        <div class="ponto ponto_elfos"><span>• Elfos</span></div>
+                        <div class="ponto ponto_halflings"><span>• Halflings</span></div>
+                        <div class="ponto ponto_orcs"><span>• Orcs</span></div>
+                    </div>
+                    
+                    <div class="div_lado_mapa">
+                        <a href="criacao.html" class="btn_principal">CRIAR PERSONAGEM</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

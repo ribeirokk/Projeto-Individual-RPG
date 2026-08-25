@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Criar Personagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="div_principal">
+        
+        <div class="div_cabecalho">
+            <div class="div_cabecalho_titulo">
+                <div class="div_logo_icone"></div>
+                <div>
+                    <h1>Criar Personagem</h1>
+                </div>
+            </div>
+            <a href="index.html" class="btn_voltar">VOLTAR À FICHA</a>
+        </div>
+
+        <div class="div_conteudo_superior">
+            
+            <div class="div_painel div_painel_foto">
+                <div class="div_painel_cabecalho">
+                    <span>IMAGEM DO PERSONAGEM</span>
+                </div>
+                <div class="div_painel_corpo">
+                    <div class="div_caixa_foto">
+                        <img id="img_personagem" src="img/sephiroth.jpg" alt="Escolha uma raça">
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_painel div_painel_atributos">
+                <div class="div_painel_cabecalho">
+                    <span>ATRIBUTOS</span>
+                </div>
+                <div class="div_painel_corpo">
+                    
+                    <div class="div_item_atributo">
+                        <strong>Força</strong>
+                        <div class="div_attr_controle">
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_forca, -1)">-</button>
+                            <input type="number" id="input_forca" class="input_atributo_num" value="10" readonly>
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_forca, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="div_item_atributo">
+                        <strong>Velocidade</strong>
+                        <div class="div_attr_controle">
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_velocidade, -1)">-</button>
+                            <input type="number" id="input_velocidade" class="input_atributo_num" value="10" readonly>
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_velocidade, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="div_item_atributo">
+                        <strong>Agilidade</strong>
+                        <div class="div_attr_controle">
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_agilidade, -1)">-</button>
+                            <input type="number" id="input_agilidade" class="input_atributo_num" value="10" readonly>
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_agilidade, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="div_item_atributo">
+                        <strong>Resistência</strong>
+                        <div class="div_attr_controle">
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_resistencia, -1)">-</button>
+                            <input type="number" id="input_resistencia" class="input_atributo_num" value="10" readonly>
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_resistencia, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="div_item_atributo">
+                        <strong>Inteligência</strong>
+                        <div class="div_attr_controle">
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_inteligencia, -1)">-</button>
+                            <input type="number" id="input_inteligencia" class="input_atributo_num" value="10" readonly>
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_inteligencia, 1)">+</button>
+                        </div>
+                    </div>
+
+                    <div class="div_item_atributo">
+                        <strong>Sorte</strong>
+                        <div class="div_attr_controle">
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_sorte, -1)">-</button>
+                            <input type="number" id="input_sorte" class="input_atributo_num" value="10" readonly>
+                            <button type="button" class="btn_calc" onclick="alterarAtributo(input_sorte, 1)">+</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="div_painel div_painel_caracteristicas">
+                <div class="div_painel_cabecalho">
+                    <span>CARACTERÍSTICAS</span>
+                </div>
+                <div class="div_painel_corpo">
+                    
+                    <div class="div_caixa_dado_edit">
+                        <label for="input_nome">NOME:</label>
+                        <input type="text" id="input_nome" placeholder="Ex: Boromir">
+                    </div>
+
+                    <div class="div_caixa_dado_edit">
+                        <label for="input_raca">RAÇA:</label>
+                        <input type="text" id="input_raca" placeholder="Selecione no mapa..." readonly>
+                    </div>
+
+                    <div class="div_caixa_dado_edit">
+                        <label>CLASSE:</label>               
+                        <label>
+                            <input type="checkbox" name="classe" value="Guerreiro">
+                            Guerreiro
+                        </label>
+                        <label>
+                            <input type="checkbox" name="classe" value="Mago">
+                            Mago
+                        </label>
+                        <label>
+                            <input type="checkbox" name="classe" value="Arqueiro">
+                            Arqueiro
+                        </label>
+                        <label>
+                            <input type="checkbox" name="classe" value="Ladino">
+                            Ladino
+                        </label>
+                    </div>
+
+                    <div class="div_caixa_dado_edit">
+                        <label for="input_idade">DATA DE NASCIMENTO:</label>
+                        <input type="date" id="input_idade">
+                    </div>
+
+                    <div class="div_caixa_dado_edit">
+                        <label for="input_origem">ORIGEM:</label>
+                        <input type="text" id="input_origem" placeholder="Ex: Gondor">
+                    </div>
+
+                    <div class="div_caixa_dado_edit">
+                        <label for="input_alinhamento">ALINHAMENTO:</label>
+                        <input type="text" id="input_alinhamento" placeholder="Ex: Leal e Neutro">
+                    </div>
+
+                    <div class="div_caixa_dado_edit">
+                        <label>GÊNERO:</label>
+                        <label>
+                            <input type="radio" name="genero" value="Masculino">Masculino
+                        </label>
+                        <label>
+                            <input type="radio" name="genero" value="Feminino">Feminino
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="div_conteudo_inferior">
+            
+            <div class="div_painel div_painel_historia">
+                <div class="div_painel_cabecalho">
+                    <span>HISTÓRIA</span>
+                </div>
+                <div class="div_painel_corpo">
+                    <div class="div_cartao_historia">
+                        <div class="div_caixa_dado_edit">
+                            <label for="input_tituloHistoria">TÍTULO:</label>
+                            <input type="text" id="input_tituloHistoria" placeholder="Ex: O Capitão da Torre Branca">
+                        </div>
+                        <div class="div_caixa_dado_edit" style="margin-top: 6px;">
+                            <label for="input_historia">HISTÓRIA:</label>
+                            <textarea id="input_historia" rows="3" placeholder="Escreva a história do personagem..."></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="div_painel div_painel_mapa">
+                <div class="div_painel_cabecalho">
+                    <span>SELEÇÃO DE RAÇA PELO MAPA</span>
+                </div>
+                <div class="div_painel_corpo div_corpo_mapa">
+                    <div class="div_area_mapa">
+                        <img src="img/digital-art-old-map-with-terrain-locations.jpg" alt="Mapa das Raças" class="img_mapa_fundo">
+                        
+                        <button type="button" class="btn_ponto ponto_anoes" onclick="escolherRaca('Anão')">• Anões</button>
+                        <button type="button" class="btn_ponto ponto_humanos" onclick="escolherRaca('Humano')">• Humanos</button>
+                        <button type="button" class="btn_ponto ponto_elfos" onclick="escolherRaca('Elfo')">• Elfos</button>
+                        <button type="button" class="btn_ponto ponto_halflings" onclick="escolherRaca('Halfling')">• Halflings</button>
+                        <button type="button" class="btn_ponto ponto_orcs" onclick="escolherRaca('Orc')">• Orcs</button>
+                    </div>
+                    
+                    <div class="div_lado_mapa">
+                        <button type="button" class="btn_principal" onclick="salvarPersonagem()">SALVAR PERSONAGEM</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script_criacao.js"></script>
+</body>
+</html>
+
