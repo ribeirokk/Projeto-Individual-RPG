@@ -1,12 +1,12 @@
 package school.sptech.projetoIndividual;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Personagem {
     private Integer id;
     private String nome;
     private String raca;
-    private String classe;
     private LocalDate idade;
     private String origem;
     private String alinhamento;
@@ -19,15 +19,15 @@ public class Personagem {
     private String tituloHistoria;
     private String historia;
     private String genero;
+    private List<Integer> classes;
 
     public Personagem() {
     }
 
-    public Personagem(Integer id, String nome, String raca, String classe, LocalDate idade, String origem, String alinhamento, Integer forca, Integer velocidade, Integer agilidade, Integer resistencia, Integer inteligencia, Integer sorte, String tituloHistoria, String historia, String genero) {
+    public Personagem(Integer id, String nome, String raca, LocalDate idade, String origem, String alinhamento, Integer forca, Integer velocidade, Integer agilidade, Integer resistencia, Integer inteligencia, Integer sorte, String tituloHistoria, String historia, String genero, List<Integer> classes) {
         this.id = id;
         this.nome = nome;
         this.raca = raca;
-        this.classe = classe;
         this.idade = idade;
         this.origem = origem;
         this.alinhamento = alinhamento;
@@ -40,6 +40,7 @@ public class Personagem {
         this.tituloHistoria = tituloHistoria;
         this.historia = historia;
         this.genero = genero;
+        this.classes = classes;
     }
 
     public Integer getId() {
@@ -66,12 +67,12 @@ public class Personagem {
         this.raca = raca;
     }
 
-    public String getClasse() {
-        return classe;
+    public LocalDate getIdade() {
+        return idade;
     }
 
-    public void setClasse(String classe) {
-        this.classe = classe;
+    public void setIdade(LocalDate idade) {
+        this.idade = idade;
     }
 
     public String getOrigem() {
@@ -154,20 +155,20 @@ public class Personagem {
         this.historia = historia;
     }
 
-    public LocalDate getIdade() {
-        return idade;
-    }
-
-    public void setIdade(LocalDate idade) {
-        this.idade = idade;
-    }
-
     public String getGenero() {
         return genero;
     }
 
     public void setGenero(String genero) {
         this.genero = genero;
+    }
+
+    public List<Integer> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(List<Integer> classes) {
+        this.classes = classes;
     }
 }
 

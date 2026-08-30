@@ -49,7 +49,6 @@ function mostrarPersonagem(personagem) {
   trocar(personagem.raca);
 }
 
-
  function trocar(raca) {
     // var raca = val_raca.value;
     var personagem = document.getElementById("img_personagem");
